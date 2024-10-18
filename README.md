@@ -10,11 +10,15 @@ or
 
 
 # Configure
+Default usernames and passwords for your dev app are stored in docker-compose.yml.
 
 ## nginx
 DocumentRoot supposed to be app/public on host machine and /var/www/html inside docker container.
 
 Change it in docker-compose.yml if you need.
+
+## MySQL
+Database stored on Docker volume. Be aware about that.
 
 ## xdebug
 Port 9003
