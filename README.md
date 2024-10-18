@@ -1,7 +1,7 @@
-PHP 8.3-fpm
-Composer 2
-MYSQL 8
-NODE 20.18
+- PHP 8.3-fpm
+- Composer 2
+- MYSQL 8
+- NODE 20.18
 
 # Installation
 `docker compose build`
@@ -13,10 +13,12 @@ or
 
 ## nginx
 DocumentRoot supposed to be app/public on host machine and /var/www/html inside docker container.
+
 Change it in docker-compose.yml if you need.
 
 ## xdebug
 Port 9003
+
 Sometimes default host.docker.internal:host-gateway not works properly. Try to change host to 127.0.0.1:9003.
 Default idekey VSCODE. To change it go to ./docker/php/20-xdebug.ini.
 
@@ -26,7 +28,6 @@ launch.json example
 {
     "version": "0.2.0",
     "configurations": [
-    //
         {
             "name": "Listen for Xdebug",
             "type": "php",
@@ -60,7 +61,9 @@ Don't forget about pathMappings
 
 # How to work
 First. You need to start `docker compose up -d` and connect to container `docker compose exec php /bin/bash`
+
 Then you can install any framework from https://packagist.org/
+
 All content will appear in app folder.
 
 ## Tips
@@ -69,5 +72,7 @@ All content will appear in app folder.
 
 # Git
 I suppose you will init git in this folder on your host.
+
 `git init`
+
 By default vendor and node_module folders excluded.
