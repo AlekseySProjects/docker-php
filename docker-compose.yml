@@ -33,7 +33,7 @@ services:
       - mysql8
     volumes:
       - ./app:/var/www/html
-      - './docker/php/20-xdebug.ini:/etc/php/8.3/cli/conf.d/20-xdebug.ini'
+      - ./docker/php/20-xdebug.ini:/usr/local/etc/php/conf.d/20-xdebug.ini
 
 
   nginx:
